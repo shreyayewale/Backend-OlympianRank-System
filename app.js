@@ -19,7 +19,7 @@ app.post("/mens", async (req, res) => {
     }
 });
 
-// ✅ READ: Handle GET request (Get all records)
+// READ: Handle GET request (Get all records)
 app.get("/mens", async (req, res) => {
     try {
         const mensData = await MensRanking.find().sort({ ranking: 1 }); 
@@ -29,7 +29,7 @@ app.get("/mens", async (req, res) => {
     }
 });
 
-// ✅ READ BY ID: Handle GET request to fetch a record by ID
+// READ BY ID: Handle GET request to fetch a record by ID
 app.get("/mens/:id", async (req, res) => {
     try {
         const _id = req.params.id;
@@ -50,7 +50,7 @@ app.get("/mens/:id", async (req, res) => {
     }
 });
 
-// ✅ UPDATE BY ID: Handle PATCH request to update a record by ID
+// UPDATE BY ID: Handle PATCH request to update a record by ID
 app.patch("/mens/:id", async (req, res) => {
     try {
         const _id = req.params.id;
@@ -66,7 +66,7 @@ app.patch("/mens/:id", async (req, res) => {
     }
 });
 
-// ✅ DELETE BY ID: Handle DELETE request to remove a record by ID
+// DELETE BY ID: Handle DELETE request to remove a record by ID
 app.delete("/mens/:id", async (req, res) => {
     try {
         const _id = req.params.id;
